@@ -69,7 +69,8 @@
 - 使用 `requestAnimationFrame` 驱动游戏循环，帧率自适应。
 - 碰撞检测采用简单的圆形距离算法（O(n²)）；大量鱼群时可优化为空间划分。
 - Canvas 渲染优化：复用渐变对象、减少状态改变。
-
+- 直接游玩的网页链接如下
+https://one-sharp.github.io/Fishing-game-/
 ## 许可
 
 此项目为示例教学项目，可自由修改与学习使用。
