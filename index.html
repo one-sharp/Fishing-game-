@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>捕鱼达人 — HTML5 Canvas 游戏</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <div id="hud">
+      <div id="coins">💰 金币: <span id="coinCount">0</span></div>
+      <div id="weapons">
+        <div id="weaponInfo">
+          <span id="missileInfo">🚀 导弹: <span id="missileAmmo">10</span></span>
+          <span style="margin-left:12px" id="netInfo">🌐 渔网: <span id="netAmmo">3</span></span>
+        </div>
+        <div id="weaponsButtons">
+          <button id="btnMissile">发射导弹</button>
+          <button id="btnNet">投掷渔网</button>
+          <select id="missileMode" style="margin-left:8px;">
+            <option value="normal">普通</option>
+            <option value="penetration" disabled>穿透</option>
+            <option value="explosive" disabled>爆炸</option>
+          </select>
+          <button id="btnBait" style="margin-left:8px;">🪢 投放饵料 (<span id="baitCount">0</span>)</button>
+          <button id="btnShop" style="margin-left:8px;">🛍️ 商店</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="shopModal" style="display:none;">
+    <div class="shopContent">
+      <h3>⭐ 商店</h3>
+      <div class="shopItem">
+        <div><strong>🎯 穿透弹</strong> — 永久解锁（导弹穿透多条鱼）</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span class="price">300</span> <button class="buy" data-item="penetration">购买</button></div>
+      </div>
+      <div class="shopItem">
+        <div><strong>💥 爆炸弹</strong> — 永久解锁（命中爆炸范围伤害）</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span class="price">350</span> <button class="buy" data-item="explosive">购买</button></div>
+      </div>
+      <div class="shopItem">
+        <div><strong>🌊 渔网扩容</strong> — 增加捕捞面积（+60/级）</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span class="price">200</span> <button class="buy" data-item="net">购买</button></div>
+      </div>
+      <div class="shopItem">
+        <div><strong>🪢 饵料包</strong> — 投放诱饵吸引鱼群</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span class="price">80</span> <button class="buy" data-item="bait">购买</button></div>
+      </div>
+      <div style="text-align:right; margin-top:12px;"><button id="shopClose">关闭</button></div>
+    </div>
+  </div>
+  <canvas id="game" width="960" height="640"></canvas>
+  <script src="src/main.js"></script>
+</body>
+</html>

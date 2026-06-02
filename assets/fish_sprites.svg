@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160">
+  <defs>
+    <linearGradient id="fishGrad0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#80d4aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ab882;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fishGrad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#ffe680;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcf40;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fishGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#ff9999;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f04040;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fishGrad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#e6a8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b844ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="1" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- frame 0: small fish (green) -->
+  <g id="f0" transform="translate(0,0)">
+    <!-- body with gradient -->
+    <ellipse cx="80" cy="80" rx="40" ry="28" fill="url(#fishGrad0)" filter="url(#glow)"/>
+    <!-- dorsal fin -->
+    <polygon points="70,55 75,35 80,55" fill="#3fa98e" opacity="0.8"/>
+    <!-- tail -->
+    <path d="M 40,75 Q 15,70 8,68 L 12,80 L 8,92 Q 15,90 40,85 Z" fill="#3fa98e" opacity="0.9"/>
+    <!-- eye (white + pupil) -->
+    <circle cx="95" cy="74" r="4" fill="white"/>
+    <circle cx="96" cy="74" r="2" fill="black"/>
+    <!-- shine -->
+    <ellipse cx="85" cy="70" rx="10" ry="6" fill="white" opacity="0.3"/>
+  </g>
+  <!-- frame 1: medium fish (yellow) -->
+  <g id="f1" transform="translate(160,0)">
+    <ellipse cx="80" cy="80" rx="56" ry="36" fill="url(#fishGrad1)" filter="url(#glow)"/>
+    <polygon points="65,52 72,30 82,52" fill="#e6b943" opacity="0.8"/>
+    <path d="M 24,75 Q 0,68 -8,66 L 0,80 L -8,94 Q 0,92 24,85 Z" fill="#e6b943" opacity="0.9"/>
+    <circle cx="100" cy="72" r="5" fill="white"/>
+    <circle cx="102" cy="72" r="2.5" fill="black"/>
+    <ellipse cx="88" cy="68" rx="14" ry="8" fill="white" opacity="0.25"/>
+  </g>
+  <!-- frame 2: large fish (red) -->
+  <g id="f2" transform="translate(320,0)">
+    <ellipse cx="80" cy="80" rx="72" ry="44" fill="url(#fishGrad2)" filter="url(#glow)"/>
+    <polygon points="58,48 68,25 84,48" fill="#d04e4e" opacity="0.8"/>
+    <path d="M 8,75 Q -18,66 -28,64 L -12,80 L -28,96 Q -18,94 8,85 Z" fill="#d04e4e" opacity="0.9"/>
+    <circle cx="108" cy="70" r="6" fill="white"/>
+    <circle cx="110" cy="70" r="3" fill="black"/>
+    <ellipse cx="92" cy="66" rx="18" ry="10" fill="white" opacity="0.2"/>
+  </g>
+  <!-- frame 3: rare fish (purple with sparkle) -->
+  <g id="f3" transform="translate(480,0)">
+    <ellipse cx="80" cy="80" rx="80" ry="48" fill="url(#fishGrad3)" filter="url(#glow)"/>
+    <!-- extra fins for rarity -->
+    <polygon points="52,45 62,18 78,45" fill="#9b58ff" opacity="0.7"/>
+    <polygon points="88,45 98,18 102,45" fill="#9b58ff" opacity="0.5"/>
+    <!-- tail -->
+    <path d="M 0,75 Q -26,64 -36,62 L -18,80 L -36,98 Q -26,96 0,85 Z" fill="#9b58ff" opacity="0.9"/>
+    <!-- eye glowing -->
+    <circle cx="115" cy="68" r="7" fill="white"/>
+    <circle cx="118" cy="68" r="3.5" fill="#9b58ff"/>
+    <!-- sparkles around rare fish -->
+    <circle cx="35" cy="50" r="3" fill="#ffff99" opacity="0.9"/>
+    <circle cx="120" cy="45" r="2.5" fill="#ffff99" opacity="0.8"/>
+    <circle cx="30" cy="100" r="2" fill="#ffff99" opacity="0.7"/>
+    <!-- shine -->
+    <ellipse cx="95" cy="65" rx="20" ry="12" fill="white" opacity="0.25"/>
+  </g>
+</svg>
